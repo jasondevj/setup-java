@@ -68494,6 +68494,7 @@ function save(id) {
             return;
         }
         try {
+            core.info(`Saving Cache : ${packageManager.path} ${primaryKey}`);
             yield cache.saveCache(packageManager.path, primaryKey);
             core.info(`Cache saved with the key: ${primaryKey}`);
         }
