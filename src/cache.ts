@@ -142,6 +142,7 @@ export async function save(id: string) {
     return;
   }
   try {
+    core.info(`Saving Cache : ${packageManager.path} ${primaryKey}`);
     await cache.saveCache(packageManager.path, primaryKey);
     core.info(`Cache saved with the key: ${primaryKey}`);
   } catch (error) {
